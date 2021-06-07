@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #fff;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--primary-color);
+}
+
+.container{
+    display : flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+ul{
+    list-style: none;
+}
+
+.icons{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.icons a{
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+   
+}
+
+.icons i{
+    font-size: 2rem;
+    cursor: pointer;
+    color: #3e3e3e;
+}
+
+.icons a::after{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    pointer-events:none;
+}
+
+a:hover{
+    transform: translateY(-10px);
+}
+
+
+a:hover:after{
+    border: 2px dashed #6d6666;
+    animation: animate 7s infinite linear;
+}
+
+
+.icons a:hover .icon-facebook{
+    color: #3b5998;
+}
+
+.icons a:hover .icon-insta{
+    color: #e1306c;
+}
+.icons a:hover .icon-twitter{
+    color: #1da1f2;
+}
+.icons a:hover .icon-linkedin{
+    color: #0e76a8;
+}
+.icons a:hover .icon-whatsapp{
+    color: #075e54;
+}
+
+
+@keyframes animate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
